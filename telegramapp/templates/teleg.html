@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-main">
+    <h1 class="titulo-main">OPÇÕES Binárias MANAGER</h1>
+</div>
+<div class="container">
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Par</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Tipo</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for dado in all_dados %}
+            <tr>
+                <td>{{dado.par}}</td>
+                <td>{{dado.preco}}</td>
+                <td>{{dado.qtd}}</td>
+                <td>{{dado.tipo}}</td>
+            </tr>
+            {% endfor %}
+    </tbody>
+    </table>
+</div>
+
+{% endblock content %}
+
+

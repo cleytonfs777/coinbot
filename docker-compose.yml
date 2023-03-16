@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  django:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///db.sqlite3
+  bot:
+    build: .
+    command: python bot.py
+    environment:
+      - DATABASE_URL=sqlite:///db.sqlite3
+    restart: always

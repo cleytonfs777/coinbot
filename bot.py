@@ -9,8 +9,6 @@ from pyrogram.session import Session
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
                             Message, ReplyKeyboardMarkup)
 
-from data.registrados import *
-
 load_dotenv()
 
 caminho_banco = os.path.join(os.getcwd(),'db.sqlite3')
